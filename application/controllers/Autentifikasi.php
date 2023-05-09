@@ -3,7 +3,6 @@
 class Autentifikasi extends CI_Controller
 {
 
-
     public function index()
     {
 
@@ -84,8 +83,7 @@ public function cekData($where = null)
     { 
         return $this->db->get_where('user', $where);
     }
-
-public function blok()
+    public function blok()
     {
         $this->load->view('autentifikasi/blok');
     }
@@ -153,4 +151,5 @@ public function registrasi()
        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Selamat!! akun member anda sudah dibuat. Silahkan Aktivasi Akun anda</div>'); redirect('autentifikasi');
     }
 }
+
 }
